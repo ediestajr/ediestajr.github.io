@@ -23,8 +23,8 @@ jobs:
       - name: SFTP Deploy
         uses: wlixcc/SFTP-Deploy-Action@v1.2.1
         with:
-          username: githubdeploy
-          server: 50.16.3.191
+          username: ${{ secrets.SSH_BABYLONUAT_USER }}
+          server: ${{ secrets.SSH_BABYLONUAT_HOST }}
           port: 22 # default is 22
           ssh_private_key: ${{ secrets.SSH_BABYLONUAT_PRIVATE_KEY }}
  
